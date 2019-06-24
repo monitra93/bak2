@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="graph-creator.css">
+  <title>Egozentrierte Netzwerkkarte</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="row fixed-row-bottom">
+      <div class="col-sm-12 text-center" style="height: 80px; margin-top: 30px;">
+        <h2>Egozentrische Netzwerkkarte</h2>
+      </div>
+
+      <div class="col-sm-3 text-center">
+        <div id="toolbox">
+          <input type="file" id="hidden-file-upload"><input id="upload-input" type="image" title="upload graph"
+            src="upload-icon.png" alt="upload graph"> <input type="image" id="download-input" title="download graph"
+            src="download-icon.png" alt="download graph"> <input type="image" id="delete-graph" title="delete graph"
+            src="trash-icon.png" alt="delete graph">
+        </div>
+      </div>
+      <div class="col-sm-3 text-center">
+        <button class="btn btn-primary" id="saveAsImg">Download PNG</button>
+      </div>
+      <div class="col-sm-2 text-center">
+        <input type="checkbox" id="myCheckbox"></br> Beziehungen Ein/Aus
+      </div>
+      <div class="col-sm-4 text-center">
+        <h3>Legende:</h3>
+
+        <div-class="col-sm-2">
+          Mann: <span style='font-size:2rem;'>&#9744;</span>
+          </div-class>
+          <div-class="col-sm-2">
+            Frau: <span style='font-size:2rem;'>&#9898;</span>
+            </div-class>
+
+
+
+            <!--<div-class="col-sm-2">
+          Mann:
+          <svg height="50" width="50">
+            <rect x="10" y="5" width="35" height="35" stroke="#333" stroke-width="2" fill=rgb(133,133,133) />
+          </svg>
+          </div-class>
+          <div-class="col-sm-2">
+            Frau:
+            <svg height="50" width="50">
+              <rect x="10" y="5" width="35" height="35" rx="35" stroke="#333" stroke-width="2" fill=rgb(133,133,133) />
+            </svg>
+            <button id="myButton" type="button" class="btn btn-danger">Danger</button>
+            </div-class>-->
+
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="chart">
+          <div id="graph">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://d3js.org/d3.v5.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/filesaver.js/0.1/FileSaver.min.js"></script>
+  <script src="js/saveSvgAsPng.js"></script>
+  <script src="graph-creator.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
