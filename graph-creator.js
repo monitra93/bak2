@@ -80,14 +80,6 @@ document.onload = (function (d3, saveAs, Blob, undefined) {
             .attr("font-family", "sans-serif")
             .attr("font-size", "2rem")
             .attr("fill", "black");
-        var text = friendsSection.append("text")
-            .attr("x", width/2-"350")
-            .attr("y", height/2-"450")
-            .attr("dy", "2rem")
-            .text("& Bekannte")
-            .attr("font-family", "sans-serif")
-            .attr("font-size", "2rem")
-            .attr("fill", "black");
 
         var topLeftArcOutside = friendsSection.append("path")
             .attr('class', 'friendsO')
@@ -142,15 +134,7 @@ document.onload = (function (d3, saveAs, Blob, undefined) {
             .attr("x", width/2-"-250")
             .attr("y", height/2-"-450")
             .attr("dy", "0rem")
-            .text("Professionelle")
-            .attr("font-family", "sans-serif")
-            .attr("font-size", "2rem")
-            .attr("fill", "black");
-        var text = friendsSection.append("text")
-            .attr("x", width/2-"-250")
-            .attr("y", height/2-"-450")
-            .attr("dy", "2rem")
-            .text("HelferInnen")
+            .text("Prof. HelferInnen")
             .attr("font-family", "sans-serif")
             .attr("font-size", "2rem")
             .attr("fill", "black");
@@ -320,6 +304,7 @@ document.onload = (function (d3, saveAs, Blob, undefined) {
         // handle download data
         d3.select("#download-input").on("click", function () {
             let saveEdges = [];
+            console.log('Save Data: ', thisGraph);
             thisGraph.edges.forEach(function (val, i) {
                 saveEdges.push({ source: val.source.id, target: val.target.id });
             });
@@ -347,6 +332,7 @@ document.onload = (function (d3, saveAs, Blob, undefined) {
                     // TODO better error handling
                     try {
                         let jsonObj = JSON.parse(txtRes);
+                        console.log('Read Data: ', jsonObj);
                         thisGraph.deleteGraph(true);
                         thisGraph.nodes = jsonObj.nodes;
                         thisGraph.setIdCt(jsonObj.nodes.length + 1);
@@ -394,9 +380,10 @@ document.onload = (function (d3, saveAs, Blob, undefined) {
 
 
 
-
-
+    // Global Vars
+    var graphObject;
     var isChecked = new Boolean(false);
+
     d3.select("#myCheckbox").on("change", function () {
         if (d3.select("#myCheckbox").property("checked")) {
             isChecked = true;
@@ -782,6 +769,29 @@ document.onload = (function (d3, saveAs, Blob, undefined) {
         }
     };
 
+    // Handle the click for the delete Button in the Tablet mode
+    d3.select('#delBtn').on('click', function (e) {
+        let thisGraph = graphObject,
+            state = thisGraph.state,
+            consts = thisGraph.consts;
+
+        let selectedNode = state.selectedNode,
+            selectedEdge = state.selectedEdge;
+
+        d3.event.preventDefault();
+        if (selectedNode) {
+            thisGraph.nodes.splice(thisGraph.nodes.indexOf(selectedNode), 1);
+            thisGraph.spliceLinksForNode(selectedNode);
+            state.selectedNode = null;
+            thisGraph.updateGraph();
+        } else if (selectedEdge) {
+            thisGraph.edges.splice(thisGraph.edges.indexOf(selectedEdge), 1);
+            state.selectedEdge = null;
+            thisGraph.updateGraph();
+        }
+    });
+
+
 
 
 
@@ -905,6 +915,7 @@ document.onload = (function (d3, saveAs, Blob, undefined) {
             .on("click", function (d) {
                 console.log("click");
                 thisGraph.circleMouseUp.call(thisGraph, d3.select(this), d);
+                graphObject = thisGraph;
                 //console.log('Element', document.getElementById('chart'));
                 //console.log('Data d:', d);
                 //console.log('this :', this);
@@ -930,7 +941,7 @@ document.onload = (function (d3, saveAs, Blob, undefined) {
                     console.log("änderungen im else", änderungen);
                 }
 
-                //thisGraph.circleMouseDown.call(thisGraph, d3.select(this), d);
+                thisGraph.circleMouseDown.call(thisGraph, d3.select(this), d);
             })
             .call(thisGraph.drag);
 
