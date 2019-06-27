@@ -31,8 +31,7 @@ Bedienung:
   * Checkbox "Neue Person/Beziehung, Namensänderung" deaktivieren
   * Gewünschtes Node oder Link Antippen
   * Mit "Löschen"-Button löschen 
- * Form der Node ändern (weiblich/männlich - nur auf Desktop):
-  * Doppeltes Anklicken der Node 
+ * Form der Node ändern (weiblich/männlich - nur auf Desktop): Doppeltes Anklicken der Node 
 * Daten-Upload
 * Daten-Download
 * Löschen der NWK
