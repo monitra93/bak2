@@ -306,7 +306,8 @@ document.onload = (function (d3, saveAs, Blob, undefined) {
             let saveEdges = [];
             console.log('Save Data: ', thisGraph);
             thisGraph.edges.forEach(function (val, i) {
-                saveEdges.push({ source: val.source.id, target: val.target.id });
+                saveEdges.push({ source: val.source.id, target: val.target.id});
+                console.log("saveedges", saveEdges);
             });
             let blob = new Blob([window.JSON.stringify({
                 "nodes": thisGraph.nodes,
