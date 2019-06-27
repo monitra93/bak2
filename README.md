@@ -8,29 +8,29 @@ Demo: http://flock-1393.students.fhstp.ac.at/bak2/index.html
 Bedienung:
 
 * Person hinzufügen: 
-     *) Checkbox "Neue Person/Beziehung, Namensänderung" aktivieren
-     -) Klick auf die gewünschte Position & Namen der Person eintragen. Mit Enter bestätigen.
+  * Checkbox "Neue Person/Beziehung, Namensänderung" aktivieren
+  * Klick auf die gewünschte Position & Namen der Person eintragen. Mit Enter bestätigen.
 * Beziehung hinzufügen am Desktop: 
-     -) Checkbox "Neue Person/Beziehung, Namensänderung" aktivieren
-     -) Per Drag & Drop Beziehung vom Startnode bis zum Endnode hinzufügen.
+  * Checkbox "Neue Person/Beziehung, Namensänderung" aktivieren
+  * Per Drag & Drop Beziehung vom Startnode bis zum Endnode hinzufügen.
 * Beziehung hinzufügen am Tablet: 
-     -) Checkbox "Neue Person/Beziehung, Namensänderung" aktivieren
-     -) Klick auf das Startnode --> das Kästchen zur Namensänderung erscheint. 
-     -) Klick auf das Endnode --> Beziehung wurde erstellt
+  * Checkbox "Neue Person/Beziehung, Namensänderung" aktivieren
+  * Klick auf das Startnode --> das Kästchen zur Namensänderung erscheint. 
+  * Klick auf das Endnode --> Beziehung wurde erstellt
 * Namen ändern:
-     -) Checkbox "Neue Person/Beziehung, Namensänderung" aktivieren
-     -) Klick bzw. Antippen der gewünschten Node. Namen ändern. Mit Enter bestätigen.
+  * Checkbox "Neue Person/Beziehung, Namensänderung" aktivieren
+  * Klick bzw. Antippen der gewünschten Node. Namen ändern. Mit Enter bestätigen.
 * Person verschieben: 
-     -) Checkbox "Neue Person/Beziehung, Namensänderung" deaktivieren
-     -) Drag & Drop der Person (Maus & Touch)
+  * Checkbox "Neue Person/Beziehung, Namensänderung" deaktivieren
+  * Drag & Drop der Person (Maus & Touch)
 * Person oder Beziehung löschen am Desktop:
-     -) Checkbox "Neue Person/Beziehung, Namensänderung" deaktivieren
-     -) Per Klick Node oder Link auswählen
-     -) Mit Backspace bzw. Entfernen-Taste löschen
+  * Checkbox "Neue Person/Beziehung, Namensänderung" deaktivieren
+  * Per Klick Node oder Link auswählen
+  * Mit Backspace bzw. Entfernen-Taste löschen
 * Person oder Beziehung löschen am Tablet:
-     -) Checkbox "Neue Person/Beziehung, Namensänderung" deaktivieren
-     -) Gewünschtes Node oder Link Antippen
-     -) Mit "Löschen"-Button löschen 
+  * Checkbox "Neue Person/Beziehung, Namensänderung" deaktivieren
+  * Gewünschtes Node oder Link Antippen
+  * Mit "Löschen"-Button löschen 
 * Daten-Upload
 * Daten-Download
 * Löschen der NWK
