@@ -8,7 +8,7 @@ Demo: http://flock-1393.students.fhstp.ac.at/bak2/index.html
 Bedienung:
 
 * Person hinzufügen: 
-     -) Checkbox "Neue Person/Beziehung, Namensänderung" aktivieren
+     *) Checkbox "Neue Person/Beziehung, Namensänderung" aktivieren
      -) Klick auf die gewünschte Position & Namen der Person eintragen. Mit Enter bestätigen.
 * Beziehung hinzufügen am Desktop: 
      -) Checkbox "Neue Person/Beziehung, Namensänderung" aktivieren
